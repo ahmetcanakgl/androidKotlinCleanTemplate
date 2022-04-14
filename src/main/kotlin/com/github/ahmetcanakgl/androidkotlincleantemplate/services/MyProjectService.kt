@@ -1,7 +1,7 @@
-package org.jetbrains.plugins.template.services
+package com.github.ahmetcanakgl.androidkotlincleantemplate.services
 
 import com.intellij.openapi.project.Project
-import org.jetbrains.plugins.template.MyBundle
+import com.github.ahmetcanakgl.androidkotlincleantemplate.MyBundle
 
 class MyProjectService(project: Project) {
 
