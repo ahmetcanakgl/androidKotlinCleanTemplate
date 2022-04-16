@@ -1,1 +1,1 @@
-rootProject.name = "androidKotlinCleanTemplate"
+rootProject.name = "cleanKotlin"
