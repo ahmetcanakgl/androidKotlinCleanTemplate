@@ -61,7 +61,7 @@ fun RecipeExecutor.cleanKotlinFragment(
                 repositoryClass = repositoryClass,
                 entityModelClass = entityModelClass
             ),
-            srcOut.resolve("interactor/$usecaseClass.kt")
+            srcOut.resolve("usecase/$usecaseClass.kt")
         )
     }
 
@@ -73,7 +73,7 @@ fun RecipeExecutor.cleanKotlinFragment(
                 entityModelClass = entityModelClass,
                 serviceClass = serviceClass
             ),
-            srcOut.resolve("api/$repositoryClass.kt")
+            srcOut.resolve("api/$moduleNameLower/$repositoryClass.kt")
         )
     }
 
@@ -85,7 +85,7 @@ fun RecipeExecutor.cleanKotlinFragment(
                 entityModelClass = entityModelClass,
                 serviceClass = serviceClass
             ),
-            srcOut.resolve("api/$serviceClass.kt")
+            srcOut.resolve("api/$moduleNameLower/$serviceClass.kt")
         )
     }
 
@@ -96,7 +96,7 @@ fun RecipeExecutor.cleanKotlinFragment(
                 apiClass = apiClass,
                 entityModelClass = entityModelClass
             ),
-            srcOut.resolve("api/$apiClass.kt")
+            srcOut.resolve("api/$moduleNameLower/$apiClass.kt")
         )
     }
 
@@ -106,7 +106,7 @@ fun RecipeExecutor.cleanKotlinFragment(
                 packageName = packageName,
                 entityModelClass = entityModelClass
             ),
-            srcOut.resolve("dao/$entityModelClass.kt")
+            srcOut.resolve("api/$entityModelClass.kt")
         )
     }
 

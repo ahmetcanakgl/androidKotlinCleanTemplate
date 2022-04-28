@@ -24,17 +24,36 @@ import javax.inject.Inject
 @HiltViewModel
 class ${moduleName}FRViewModel @Inject constructor(val $usecaseClsProp: $usecaseClass) : BaseViewModel() {
 
-    val $entityClsProp: MutableLiveData<$entityModelClass> = MutableLiveData()
-
+    val ${entityClsProp}LD: MutableLiveData<$entityModelClass> = MutableLiveData()
+    
+    /**
+     * Service calls
+     */
+     
     fun f() =
         $usecaseClsProp($usecaseClass.Params(value = ""), viewModelScope) {
             it.fold(fnL = ::handleFailure,
                     fnR = ::handleMe)
         }
 
+    /**
+     * Service response handlers
+     */
+
     private fun handleMe(response: $entityModelClass) {
         $entityClsProp.value = response
     }
+
+    /**
+     * Controller calls
+     */
+
+    
+    /**
+     * Private Data process and livedata update functions
+     */
+
+
 
 }
 """
